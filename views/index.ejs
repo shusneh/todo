@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+   <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="heading">
+  <h1 style="color: coral;"> today is <%=tday%> </h1>
+</div>
+  <div class="box">
+    
+   <% for (let index = 0; index <  tlist.length ; index++) { %>
+    <div class="item">
+    <input type="checkbox">
+        <p><%= tlist[index] %></p>
+    <% } %>
+  </div>
+    
+  
+  <% var dj=""; %>
+  
+  <form action="/" method="post">
+        
+    <label for="todo">
+        <%if(tlist.length>0){%>
+            <h2>Please enter your next goal !</h2>
+            <%}else{%>
+              <h2>Please enter your goal !</h2>
+            <%}%>
+    </label>
+    <input type="text" name="todo" id="todo">
+    <button type="submit" style="color: rgb(228, 136, 16);">set</button>
+</form>
+</div>
+</body>
+</html>
